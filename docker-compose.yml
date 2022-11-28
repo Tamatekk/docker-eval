@@ -1,12 +1,7 @@
-version: "3"
-services:  
-  nginx:
-    build: html
-    env_file: vars.env
-    ports:
-      - 8080:80
-    expose:
-      - 8080
+---
+version: '3'
+services:
+  web:
+    image: tamatekk/eval:latest
   app:
-    build: app
-    env_file: vars.env
+    image: tamatekk/eval:latest
