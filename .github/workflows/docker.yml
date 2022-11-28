@@ -18,13 +18,13 @@ jobs:
       - name: Build and push app
         uses: docker/build-push-action@v3
         with:
-            context: ./backend
+            context: ./app
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/app:latest 
       - name: Build and push web
         uses: docker/build-push-action@v3
         with:
-            context: ./frontend
+            context: ./html
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/web:latest 
       
